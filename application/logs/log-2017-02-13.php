@@ -1,0 +1,64 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2017-02-13 03:19:44 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:19:45 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:19:45 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:19:47 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:19:48 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:22:12 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:22:12 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:22:12 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:22:13 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:22:14 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:24:46 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:24:46 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:24:46 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:24:47 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:24:48 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:24:58 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:24:58 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:24:58 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:24:59 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:25:00 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:26:10 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:26:10 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:26:10 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:26:11 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:26:12 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:28:01 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:28:02 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:28:02 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:28:03 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:28:56 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:28:56 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:28:56 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:28:57 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:28:58 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:29:41 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:29:41 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:29:41 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:29:42 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:29:44 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:30:09 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:30:09 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:30:09 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:30:10 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:30:11 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:30:29 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:30:29 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:30:29 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:30:30 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:30:30 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:30:31 --> 404 Page Not Found: Public/home
+ERROR - 2017-02-13 03:35:08 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-02-13 03:35:09 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-02-13 03:40:45 --> 404 Page Not Found: Article/ccc
+ERROR - 2017-02-13 03:40:46 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-02-13 05:31:54 --> 404 Page Not Found: Article/ccc
+ERROR - 2017-02-13 06:50:08 --> 404 Page Not Found: Detail/test.php
+ERROR - 2017-02-13 06:50:26 --> 404 Page Not Found: Detail/test.php
+ERROR - 2017-02-13 06:51:12 --> 404 Page Not Found: Detail/test.php
+ERROR - 2017-02-13 06:52:34 --> 404 Page Not Found: Detail/test.php
+ERROR - 2017-02-13 07:28:14 --> Severity: error --> Exception: Call to undefined function safe_replace() D:\phpStudy\WWW\blog\application\controllers\home\Article.php 37
+ERROR - 2017-02-13 08:17:03 --> Query error: Duplicate entry '0' for key 'PRIMARY' - Invalid query: INSERT INTO `ci_article_comment` (`email`, `nickname`, `article_id`, `content`) VALUES ('12121@qq.com', '12121', '13', '12121')
+ERROR - 2017-02-13 08:45:39 --> Severity: error --> Exception: Call to undefined method CI_DB_mysqli_result::order_by() D:\phpStudy\WWW\blog\application\models\article_model.php 130
