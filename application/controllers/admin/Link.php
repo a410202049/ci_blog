@@ -15,7 +15,7 @@ class Link extends admin_Auth_Controller {
         foreach ($links as $key => $value) {
             $links[$key]['parentid']= $value['pid'];
             $links[$key]['type']= $typeNames[$value['tid']]['name'];
-            $links[$key]['status_class'] = $value['status']?'label-primary':'label-danger';    
+            $links[$key]['status_class'] = $value['status']?'label-primary':'label-danger';
             $links[$key]['status'] = $value['status']?'true':'false';
         }
 
@@ -33,7 +33,7 @@ class Link extends admin_Auth_Controller {
 	        <td>";
 
         if(checkAuth('Link','edit',$this->uid)){
-          $tdStr.= "<a href='javascript:void(0)' class='btn btn-sm btn-primary edit-btn' data-val='\$id' ><i class='fa fa-edit'></i></a> "; 
+          $tdStr.= "<a href='javascript:void(0)' class='btn btn-sm btn-primary edit-btn' data-val='\$id' ><i class='fa fa-edit'></i></a> ";
         }
         if(checkAuth('Link','del',$this->uid)){
           $tdStr.="<a href='javascript:void(0)' class='btn btn-sm btn-danger delete-btn' data-val='\$id' ><i class='fa fa-trash'></i></a>";
@@ -53,7 +53,7 @@ class Link extends admin_Auth_Controller {
 			$where = array_merge($where, array('id !='=>$id));
 		}
 		$data = $this->db->get_where('link',$where)->result_array();
-        
+
         foreach ($data as $key => $value) {
             $data[$key]['parentid']= $value['pid'];
         }
@@ -88,7 +88,6 @@ class Link extends admin_Auth_Controller {
 			'url' =>$arr['url'],
 			'pid' =>$arr['pid'],
 			'name' =>$arr['name'],
-			'router_url' =>$arr['router_url'],
 			'target'=>$arr['target'],
 			'tid'=>$arr['tid']
 		);

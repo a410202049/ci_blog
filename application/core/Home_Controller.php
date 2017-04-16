@@ -8,19 +8,5 @@ class Home_Controller extends Base_Controller {
         $twig_config['template_dir'] = $twig_config['template_dir'].$tplName;
         $this->load->library('Twig',$twig_config);
         $this->site = $this->site->getSiteInfo();
-        $navs = getLinks("navLink",false);
-        $links = getLinks("footerLink",false);
-        $this->twig->assign('navs',$navs);
-        $this->twig->assign('site',$this->site);
-        $current_nav = array();
-        foreach ($navs as $key => $value) {
-            if($value['active']=='true'){
-                $current_nav = $value;
-                break;
-            }
-        }
-
-        $this->twig->assign('current_nav',$current_nav);
-        $this->twig->assign('links',$links);
     }
 }

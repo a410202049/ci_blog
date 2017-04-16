@@ -96,7 +96,7 @@ class Base_Controller extends CI_Controller {
             $page_config['total'] = $this->db->where($where)->count_all_results($tableName);
         }
         $this->pager->initialize($page_config);
-        
+
         if(isset($array['query'])){
             $data = $this->db->query($array['query'].' LIMIT '.$page_config['perpage'] * ($page_config['nowindex'] - 1).','.$page_config['perpage'])->result_array();
         }else{
@@ -143,5 +143,3 @@ class admin_Auth_Controller extends Base_Controller {
 }
 
 require_once 'Home_Controller.php';
-
-

@@ -1,4 +1,4 @@
-<?php 
+<?php
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /**
  * Created by PhpStorm.
@@ -38,14 +38,12 @@ class Twig {
         $CI = & get_instance ();
         $CI->load->helper(array('url','common'));
         $this->twig->addExtension(new Twig_Extension_Debug());
-        $this->twig->addFunction(new Twig_SimpleFunction('site_url', 'site_url'));
-        $this->twig->addFunction(new Twig_SimpleFunction('getLinks', 'getLinks'));
         $this->twig->addFunction(new Twig_SimpleFunction('dump', 'dump'));
         $this->twig->addFunction(new Twig_SimpleFunction('base_url', 'base_url'));
         $this->twig->addFunction(new Twig_SimpleFunction('checkAuth', 'checkAuth'));
         $this->twig->addFilter(new Twig_SimpleFilter('dump', 'dump'));
-        $this->twig->addFunction(new Twig_SimpleFunction('lang_choice', 'lang_choice'));
-        
+
+
     }
 
     /**
