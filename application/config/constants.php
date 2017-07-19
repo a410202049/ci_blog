@@ -91,3 +91,11 @@ define('AUTH_COOKIE_NAME','CI_AUTHCOOKIE_8xyneKHkLxwcSafAlw8E7olw70mYhLTy');
 
 define('IS_AJAX', isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest');
 define("IS_POST", strtolower($_SERVER['REQUEST_METHOD']) == 'post');
+
+
+if ( ! defined('HTTP_REQUEST_METHOD_GET')) {
+    define('HTTP_REQUEST_METHOD_GET', 'GET');
+}
+if ( ! defined('HTTP_REQUEST_METHOD_POST')) {
+    define('HTTP_REQUEST_METHOD_POST', 'POST');
+}

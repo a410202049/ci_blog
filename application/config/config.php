@@ -100,7 +100,7 @@ $config['charset'] = 'UTF-8';
 | setting this variable to TRUE (boolean).  See the user guide for details.
 |
 */
-$config['enable_hooks'] = FALSE;
+$config['enable_hooks'] = TRUE;
 
 /*
 |--------------------------------------------------------------------------
@@ -199,11 +199,14 @@ $config['directory_trigger'] = 'd';
 | You can enable error logging by setting a threshold over zero. The
 | threshold determines what gets logged. Threshold options are:
 |
-|	0 = Disables logging, Error logging TURNED OFF
-|	1 = Error Messages (including PHP errors)
-|	2 = Debug Messages
-|	3 = Informational Messages
-|	4 = All Messages
+| 'FATAL'    => 1,
+| 'ERROR'    => 1,
+| 'WARNING'  => 2,
+| 'NOTICE'   => 4,
+| 'TRACE'    => 8,
+| 'DEBUG'    => 16,
+| 'INFO'     => 16,
+| 'ALL'      => 32
 |
 | You can also pass an array with threshold levels to show individual error types
 |
@@ -213,7 +216,7 @@ $config['directory_trigger'] = 'd';
 | your log files will fill up very fast.
 |
 */
-$config['log_threshold'] = 1;
+$config['log_threshold'] = 8;
 
 /*
 |--------------------------------------------------------------------------
