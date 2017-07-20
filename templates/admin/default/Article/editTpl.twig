@@ -1,8 +1,6 @@
 {% extends "Common/iframe_common.twig" %}
-{% block container %}
-<link rel="stylesheet" type="text/css" href="{{base_url('public/admin/css/plugins/summernote/summernote.css')}}">
-<link rel="stylesheet" type="text/css" href="{{base_url('public/admin/css/plugins/summernote/summernote-bs3.css')}}">
-<link rel="stylesheet" type="text/css" href="{{base_url('public/admin/js/plugins/layer/laydate/skins/molv/laydate.css')}}">
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{{base_url('public/admin/js/plugins/editor/css/editormd.min.css')}}">
 <link rel="stylesheet" type="text/css" href="{{base_url('public/admin/css/plugins/webuploader/webuploader.css')}}">
 <style>
     .tags-container .btn.active{
@@ -29,6 +27,8 @@
         display: block;
     }
 </style>
+{% endblock %}
+{% block container %}
 <div class="wrapper">
     <div class="row">
         <div class="col-sm-12">
@@ -49,7 +49,7 @@
                                     </div>
                                     <div class="form-group col-sm-3">
                                         <label for="none">发布时间</label>
-                                        <input type="text" name="publish" id="add-publish" class="form-control layer-date" value="{{article.publishtime}}">
+                                        <input type="text" name="publish" id="add-publish" class="laydate-icon form-control layer-date" value="{{article.publishtime}}">
                                     </div>
                                 </div>
                                 <div class="row">
@@ -73,7 +73,9 @@
                                     </div>
                                     <div class="form-group must">
                                     <label for="none">文章内容</label>
-                                        <div class="form-control editor form-data" data-name="content" >{{article.content|raw}}</div>
+                                        <div id="editormd">
+                                            <textarea style="display:none;">{{article.content}}</textarea>
+                                        </div>
                                     </div>
 
                                       <div class="form-group must">
@@ -82,7 +84,7 @@
 
                                         </select>
                                     </div>
-                                    <div class="row">
+<!--                                     <div class="row">
                                         <div class="form-group col-sm-1">
                                             <label class="control-label">开启评论：</label>
                                             <div class="btn-switcher {% if article.is_comment %}active{% endif %}" id="is_comment">
@@ -95,7 +97,7 @@
                                             <span></span>
                                             </div>
                                         </div>
-                                     </div>
+                                     </div> -->
                                     <div class="row">
                                         <div class="form-group col-sm-1">
                                             <label for="none">浏览量</label>
@@ -123,9 +125,7 @@
 </div>
 {% endblock %}
 {% block script %}
-<script src="{{base_url('public/admin/js/plugins/summernote/summernote.min.js')}}"></script>    
-<script src="{{base_url('public/admin/js/plugins/summernote/lang/summernote-zh-CN.js')}}"></script>    
-<script src="{{base_url('public/admin/js/plugins/layer/laydate/laydate.js')}}"></script>    
+<script src="{{base_url('public/admin/js/plugins/editor/editormd.min.js')}}"></script>    
 <script src="{{base_url('public/admin/js/plugins/webuploader/webuploader.min.js')}}"></script>  
 <script>
 
@@ -175,44 +175,18 @@ jQuery(document).ready(function($) {
          max:common.getDate(),
          istime:true
     })
+    laydate.skin('molv')
 
-    $('.editor').summernote({
-        minHeight: 300,
-        callbacks:{
-            onImageUpload: function(files, editor, welEditable) {
-            },
-            onPaste:function(e){
-                console.log(e.originalEvent.clipboardData.getData("url"))
-            }
-            
-        }
+
+    ContentEditor = editormd("editormd", {
+        width   : "100%",
+        height  : 640,
+        syncScrolling : "single",
+        path    : "{{base_url('public/admin/js/plugins/editor/lib/')}}",
+        imageUpload : true,
+        imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+        imageUploadURL : "{{base_url('admin/Index/markdown_upload?folder=article')}}"
     });
-    $(document).on('summernote.image.upload', '.editor', function(we,files) {
-        var data = new FormData();
-        $this = $(this)
-        data.append("file", files[0]);
-        $.ajax({
-            data: data,
-            type: "POST",
-            url: "{{base_url('admin/Index/upload?folder=article')}}",
-            cache: false,
-            contentType: false,
-            processData: false,
-        })
-        .done(function(e) {
-            var e = JSON.parse(e)
-            if (e.status!=1) {
-                common.ajaxError(e);
-                return false;
-            }    
-            $this.summernote('insertImage', base_url+e.data.url);            
-        })
-        .fail(function() {
-            common.ajaxError(e);
-            
-        })      
-    });
-    
     var uploader = WebUploader.create({
         auto: true,
         compress:false,
@@ -267,11 +241,11 @@ jQuery(document).ready(function($) {
                 title:$('#title').val(),
                 description:$('#description').val(),
                 tags:$('#keywords').val(),
-                is_comment:$("#is_comment").hasClass('active')?1:0,
-                is_top:$("#is_top").hasClass('active')?1:0,
+                // is_comment:$("#is_comment").hasClass('active')?1:0,
+                // is_top:$("#is_top").hasClass('active')?1:0,
                 hit_num:$('#hit_num').val(),
                 release_source:$('#release_source').val(),
-                content:$('.editor').summernote('code').replace("script","p")
+                content:ContentEditor.getMarkdown()
            }
 
            $.ajax({

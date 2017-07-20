@@ -18,9 +18,9 @@
         <link href="{{base_url('public/admin/css/select2.min.css')}}" rel="stylesheet">
         <link href="{{base_url('public/admin/css/style.min.css')}}" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{base_url('public/admin/css/plugins/iCheck/custom.css')}}">
+        {% block style %}{% endblock %}
         <script src="{{base_url('public/admin/js/jquery.min.js')}}"></script>
         
-        {% block style %}{% endblock %}
     </head>
     <body class="gray-bg">
     {% block container %}{% endblock %}

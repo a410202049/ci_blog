@@ -162,7 +162,7 @@ class Article extends admin_Auth_Controller {
 
 	public function editTpl(){
 		$arr = $this->input->get();
-		$this->load->model('article_model','article');
+		$this->load->model('ArticleModel','article');
 		$article = $this->article->getArticle($arr['id']);
 		$categorys = $this->db->get('article_category')->result_array();
 		$arr['article'] = $article;

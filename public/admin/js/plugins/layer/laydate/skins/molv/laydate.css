@@ -17,7 +17,7 @@
 
 .laydate_body .laydate_box{border-top:none; border-bottom:none; background-color:#fff; color:#00625A;}
 .laydate_body .laydate_box input{background:none!important; color:#fff;}
-.laydate_body .laydate_box .laydate_void{color:#00E8D7!important;}
+/*.laydate_body .laydate_box .laydate_void{color:#00E8D7!important;}*/
 .laydate_body .laydate_box a, .laydate_body .laydate_box a:hover{color:#00625A;}
 .laydate_body .laydate_box a:hover{color:#666;}
 .laydate_body .laydate_click{background-color:#009F95!important; color:#fff!important;}

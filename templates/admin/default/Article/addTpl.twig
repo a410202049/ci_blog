@@ -1,7 +1,6 @@
 {% extends "Common/iframe_common.twig" %}
 {% block style %}
 <link rel="stylesheet" type="text/css" href="{{base_url('public/admin/js/plugins/editor/css/editormd.min.css')}}">
-<link rel="stylesheet" type="text/css" href="{{base_url('public/admin/js/plugins/layer/laydate/skins/molv/laydate.css')}}">
 <link rel="stylesheet" type="text/css" href="{{base_url('public/admin/css/plugins/webuploader/webuploader.css')}}">
 <style>
     .tags-container .btn.active{
@@ -52,7 +51,7 @@
                                     </div>
                                     <div class="form-group col-sm-3">
                                         <label for="none">发布时间</label>
-                                        <input type="text" name="publish" id="add-publish" class="form-control layer-date">
+                                        <input id="add-publish" class="laydate-icon form-control layer-date">
                                     </div>
                                 </div>
                                 <div class="row">
@@ -85,20 +84,7 @@
                                         <label for="none">文章关键词</label>
                                         <select class="form-control" style="width:100%" id="keywords" multiple=multiple></select>
                                     </div>
-                                    <div class="row">
-                                        <div class="form-group col-sm-1">
-                                            <label class="control-label">开启评论：</label>
-                                            <div class="btn-switcher active" id="is_comment">
-                                            <span></span>
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-sm-1">
-                                            <label class="control-label">是否置顶：</label>
-                                            <div class="btn-switcher" id="is_top">
-                                            <span></span>
-                                            </div>
-                                        </div>
-                                     </div>
+
                                     <div class="row">
                                         <div class="form-group col-sm-1">
                                             <label for="none">浏览量</label>
@@ -127,7 +113,7 @@
 {% endblock %}
 {% block script %}
 <script src="{{base_url('public/admin/js/plugins/editor/editormd.min.js')}}"></script>    
-<script src="{{base_url('public/admin/js/plugins/layer/laydate/laydate.js')}}"></script>    
+   
 <script src="{{base_url('public/admin/js/plugins/webuploader/webuploader.min.js')}}"></script>  
 <script>
 
@@ -169,74 +155,20 @@ jQuery(document).ready(function($) {
          format: 'YYYY-MM-DD hh:mm:ss',
          max:common.getDate(),
          istime:true
-    })
+    });
+    laydate.skin('molv')
 
-    testEditor = editormd("editormd", {
+    ContentEditor = editormd("editormd", {
         width   : "100%",
         height  : 640,
         syncScrolling : "single",
         path    : "{{base_url('public/admin/js/plugins/editor/lib/')}}",
         imageUpload : true,
         imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
-        imageUploadURL : "{{base_url('admin/Index/upload?folder=article')}}"
-        /*
-         上传的后台只需要返回一个 JSON 数据，结构如下：
-         {
-            success : 0 | 1,           // 0 表示上传失败，1 表示上传成功
-            message : "提示的信息，上传成功或上传失败及错误信息等。",
-            url     : "图片地址"        // 上传成功时才返回
-         }
-         */
+        imageUploadURL : "{{base_url('admin/Index/markdown_upload?folder=article')}}"
     });
         
-        /*
-        // or
-        testEditor = editormd({
-            id      : "test-editormd",
-            width   : "90%",
-            height  : 640,
-            path    : "../lib/"
-        });
-        */
 
-
-    // $('.editor').summernote({
-    //     minHeight: 300,
-    //     callbacks:{
-    //         onImageUpload: function(files, editor, welEditable) {
-    //         },
-    //         onPaste:function(e){
-    //             console.log(e.originalEvent.clipboardData.getData("url"))
-    //         }
-            
-    //     }
-    // });
-    // $(document).on('summernote.image.upload', '.editor', function(we,files) {
-    //     var data = new FormData();
-    //     $this = $(this)
-    //     data.append("file", files[0]);
-    //     $.ajax({
-    //         data: data,
-    //         type: "POST",
-    //         url: "{{base_url('admin/Index/upload?folder=article')}}",
-    //         cache: false,
-    //         contentType: false,
-    //         processData: false,
-    //     })
-    //     .done(function(e) {
-    //         var e = JSON.parse(e)
-    //         if (e.status!=1) {
-    //             common.ajaxError(e);
-    //             return false;
-    //         }    
-    //         $this.summernote('insertImage', base_url+e.data.url);            
-    //     })
-    //     .fail(function() {
-    //         common.ajaxError(e);
-            
-    //     })      
-    // });
-    
     var uploader = WebUploader.create({
         auto: true,
         compress:false,
@@ -290,11 +222,12 @@ jQuery(document).ready(function($) {
                 title:$('#title').val(),
                 description:$('#description').val(),
                 tags:$('#keywords').val(),
-                is_comment:$("#is_comment").hasClass('active')?1:0,
-                is_top:$("#is_top").hasClass('active')?1:0,
+                // is_comment:$("#is_comment").hasClass('active')?1:0,
+                // is_top:$("#is_top").hasClass('active')?1:0,
                 hit_num:$('#hit_num').val(),
                 release_source:$('#release_source').val(),
-                content:$('.editor').summernote('code').replace("script","p")
+                content:ContentEditor.getMarkdown()
+
            }
 
            $.ajax({
