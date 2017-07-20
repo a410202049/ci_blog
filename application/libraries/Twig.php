@@ -6,7 +6,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
  * Date: 15-3-7
  * Time: 下午12:10
  */
-require APPPATH.'third_party/vendor/autoload.php';
+
 class Twig {
 
     public $twig;

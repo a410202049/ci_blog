@@ -5,10 +5,10 @@ class Base_Controller extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-        $this->load->model('data_model','data');//加载二次封装ar操作
-        $this->load->model('user_model','user');
+        $this->load->model('DataModel','data');//加载二次封装ar操作
+        $this->load->model('UserModel','user');
         $this->load->library('LoginAuth');//加载token验证类
-        $this->load->model('site_model','site');
+        $this->load->model('SiteModel','site');
         $this->config->load('regular');//加载正则配置文件
         $this->regular = $this->config->item('regular');
     }
