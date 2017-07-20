@@ -77,42 +77,7 @@
                                     <div class="form-group must">
                                     <label for="none">文章内容</label>
                                         <div id="editormd">
-                                            <textarea style="display:none;">
-                                                
-                                                [TOC]
-
-#### Disabled options
-
-- TeX (Based on KaTeX);
-- Emoji;
-- Task lists;
-- HTML tags decode;
-- Flowchart and Sequence Diagram;
-
-#### Editor.md directory
-
-    editor.md/
-            lib/
-            css/
-            scss/
-            tests/
-            fonts/
-            images/
-            plugins/
-            examples/
-            languages/     
-            editormd.js
-            ...
-
-```html
-&lt;!-- English --&gt;
-&lt;script src="../dist/js/languages/en.js"&gt;&lt;/script&gt;
-
-&lt;!-- 繁體中文 --&gt;
-&lt;script src="../dist/js/languages/zh-tw.js"&gt;&lt;/script&gt;
-```
-
-                                            </textarea>
+                                            <textarea style="display:none;"></textarea>
                                         </div>
                                     </div>
 
@@ -213,7 +178,7 @@ jQuery(document).ready(function($) {
         path    : "{{base_url('public/admin/js/plugins/editor/lib/')}}",
         imageUpload : true,
         imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
-        imageUploadURL : "{{base_url('admin/Index/upload?folder=article')}}",
+        imageUploadURL : "{{base_url('admin/Index/upload?folder=article')}}"
         /*
          上传的后台只需要返回一个 JSON 数据，结构如下：
          {
