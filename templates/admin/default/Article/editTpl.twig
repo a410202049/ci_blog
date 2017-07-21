@@ -73,7 +73,7 @@
                                     </div>
                                     <div class="form-group must">
                                     <label for="none">文章内容</label>
-                                        <div id="editormd">
+                                        <div id="editormd" style="z-index: 9">
                                             <textarea style="display:none;">{{article.content}}</textarea>
                                         </div>
                                     </div>
@@ -84,7 +84,7 @@
 
                                         </select>
                                     </div>
-<!--                                     <div class="row">
+                                     <div class="row">
                                         <div class="form-group col-sm-1">
                                             <label class="control-label">开启评论：</label>
                                             <div class="btn-switcher {% if article.is_comment %}active{% endif %}" id="is_comment">
@@ -97,7 +97,7 @@
                                             <span></span>
                                             </div>
                                         </div>
-                                     </div> -->
+                                     </div>
                                     <div class="row">
                                         <div class="form-group col-sm-1">
                                             <label for="none">浏览量</label>
@@ -241,8 +241,8 @@ jQuery(document).ready(function($) {
                 title:$('#title').val(),
                 description:$('#description').val(),
                 tags:$('#keywords').val(),
-                // is_comment:$("#is_comment").hasClass('active')?1:0,
-                // is_top:$("#is_top").hasClass('active')?1:0,
+                is_comment:$("#is_comment").hasClass('active')?1:0,
+                is_top:$("#is_top").hasClass('active')?1:0,
                 hit_num:$('#hit_num').val(),
                 release_source:$('#release_source').val(),
                 content:ContentEditor.getMarkdown()

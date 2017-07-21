@@ -2,57 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4bc15257-8088-43f3-be1d-4ce3d262ff4c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/0ac7c821770358b3984e12452fb8466f.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/0d01d1b2ec5af62190cf511f1b3eea81.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/1703cc08d7d9008d9a18610368111ec5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/39b596e6a57fa2dc65a8bfde3501a76a.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/3e82e5741f08fbb42afe5107008dd7ac.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/454459c62ce7246941c2618b5e357f8b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/47d55162b6da06ec30912ae1985608b3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/5240936acee44e7aac5726d00c6ac1fa.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/5bf9a127eae7007fe5fd26a516dafcb2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/688a274c02073cb01f8091c89658240e.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/6cb47291e9edd22ebe8fb9ba56441ed0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/6f74f6d62cca7bfb5cb24b31e79a6bc0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/77a27ada2adcde215d7893cc272ae114.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/7a6e4113b8702a9d92ce039bbbd4cc69.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/81e1a8d7451ffcab85b7d3649d15dffa.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/a435d5480acc677a093486127a467d3f.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/ac1d93f482d486b83f255fda95f614a9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/b5e8f037d4284c7acb6736f92e98f8b5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/c18ce8cf99acf4db9c593a3c1d63a2ae.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/cut_0ac7c821770358b3984e12452fb8466f.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/cut_0d01d1b2ec5af62190cf511f1b3eea81.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/cut_3e82e5741f08fbb42afe5107008dd7ac.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/cut_454459c62ce7246941c2618b5e357f8b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/cut_47d55162b6da06ec30912ae1985608b3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/cut_5240936acee44e7aac5726d00c6ac1fa.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/cut_5bf9a127eae7007fe5fd26a516dafcb2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/cut_6cb47291e9edd22ebe8fb9ba56441ed0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/cut_6f74f6d62cca7bfb5cb24b31e79a6bc0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/cut_77a27ada2adcde215d7893cc272ae114.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/cut_7a6e4113b8702a9d92ce039bbbd4cc69.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/cut_ac1d93f482d486b83f255fda95f614a9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/cut_b5e8f037d4284c7acb6736f92e98f8b5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/cut_c18ce8cf99acf4db9c593a3c1d63a2ae.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/cut_e1d052a5b41a86fb568aeec57d063544.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/cut_ed77bbbdc2597f2fe61cf7d44be063f9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/cut_f8587d97704d7706f8284fd47ccd1213.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/cut_f93112ce36f9e6ff1a81cce476095e5e.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/cut_ff9480276ad8480d5c60230593aae948.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/d07576281c61dc3fdec2e52c35f45918.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/d3f8dbb62dbe4362f004844729381041.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/e1d052a5b41a86fb568aeec57d063544.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/e1dcd4f9898368e4ac9789e4adfe6f48.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/ed77bbbdc2597f2fe61cf7d44be063f9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/f8587d97704d7706f8284fd47ccd1213.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/f93112ce36f9e6ff1a81cce476095e5e.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/fa0f0012a38bb6b31f627fda71ebfd0c.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/fc1d409615a8a128e403c21f21d41060.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/uploads/article/ff9480276ad8480d5c60230593aae948.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/database.php" afterPath="$PROJECT_DIR$/application/config/database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/Index.php" afterPath="$PROJECT_DIR$/application/controllers/admin/Index.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/admin/css/style.min.css_bak" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/admin/css/style.min.css" afterPath="$PROJECT_DIR$/public/admin/css/style.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/default/Article/addTpl.twig" afterPath="$PROJECT_DIR$/templates/admin/default/Article/addTpl.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/default/Article/editTpl.twig" afterPath="$PROJECT_DIR$/templates/admin/default/Article/editTpl.twig" />
     </list>
     <ignored path="BrickPHP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,53 +21,52 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="addTpl.twig" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/templates/admin/default/Article/addTpl.twig">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.45704845">
+                    <caret line="77" column="59" selection-start-line="77" selection-start-column="59" selection-end-line="77" selection-end-column="77" />
+                    <folding>
+                      <element signature="e#3825#3843#0#HTML" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="BrickPHP" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Article.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/admin/Article.php">
+      <file leaf-file-name="iframe_common.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/admin/default/Common/iframe_common.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1500199545738" expanded="true" signature="590:782" placeholder="select a.*, ..ci_article..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/controllers/admin/Index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.649635">
-              <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-              <folding>
-                <marker date="1500548123716" expanded="true" signature="3219:3350" placeholder="..." />
-                <marker date="1500548123716" expanded="true" signature="3225:3349" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/config/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="16.3125">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.53125">
+              <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="url_helper.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/system/helpers/url_helper.php">
+      <file leaf-file-name="editTpl.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/admin/default/Article/editTpl.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.84375">
-              <caret line="86" column="45" selection-start-line="86" selection-start-column="45" selection-end-line="86" selection-end-column="45" />
-              <folding />
+            <state vertical-scroll-proportion="0.79379565">
+              <caret line="75" column="77" selection-start-line="75" selection-start-column="77" selection-end-line="75" selection-end-column="77" />
+              <folding>
+                <element signature="e#4044#4062#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -142,6 +94,8 @@
         <option value="$PROJECT_DIR$/core/Router.php" />
         <option value="$PROJECT_DIR$/application/core/MY_Log.php" />
         <option value="$PROJECT_DIR$/application/controllers/admin/Index.php" />
+        <option value="$PROJECT_DIR$/templates/admin/default/Article/addTpl.twig" />
+        <option value="$PROJECT_DIR$/templates/admin/default/Article/editTpl.twig" />
       </list>
     </option>
   </component>
@@ -239,6 +193,94 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ci_blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BrickPHP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ci_blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BrickPHP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ci_blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BrickPHP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ci_blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BrickPHP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ci_blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Article" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -688,7 +730,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1500199545738" expanded="true" signature="590:782" placeholder="select a.*, ..ci_article..." />
+            <marker date="1500549246757" expanded="true" signature="590:782" placeholder="select a.*, ..ci_article..." />
           </folding>
         </state>
       </provider>
@@ -713,9 +755,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.649635">
           <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/default/Common/iframe_common.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.53125">
+          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/default/Article/addTpl.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45704845">
+          <caret line="77" column="59" selection-start-line="77" selection-start-column="59" selection-end-line="77" selection-end-column="77" />
           <folding>
-            <marker date="1500548123716" expanded="true" signature="3219:3350" placeholder="..." />
-            <marker date="1500548123716" expanded="true" signature="3225:3349" placeholder="..." />
+            <element signature="e#3825#3843#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/default/Article/editTpl.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.79379565">
+          <caret line="75" column="77" selection-start-line="75" selection-start-column="77" selection-end-line="75" selection-end-column="77" />
+          <folding>
+            <element signature="e#4044#4062#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
