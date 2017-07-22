@@ -84,11 +84,23 @@ class Article extends admin_Auth_Controller {
 		$aid = $this->db->insert_id();
 		if($tags){
 			foreach ($tags as $key => $value) {
-				$tagData = array(
-					'object_id' => $aid,
-					'type' => 'article',
-					'tag_id' => $value
-				);
+				$data = $this->db->get_where('tags',array('name'=>$value))->row_array();
+				if($data){
+					$tagData = array(
+							'object_id' => $aid,
+							'type' => 'article',
+							'tag_id' => $data['id']
+					);
+				}else{
+					$this->db->insert('tags',array('name'=>$value,'bordercolor'=>'#1ab394','fontcolor'=>'#ffffff','color'=>'#1ab394'));
+					$tid = $this->db->insert_id();
+					$tagData = array(
+							'object_id' => $aid,
+							'type' => 'article',
+							'tag_id' => $tid
+					);
+				}
+
 				$this->db->insert('relation_tags',$tagData);
 			}
 		}
@@ -133,16 +145,28 @@ class Article extends admin_Auth_Controller {
 			'author_id'=>$this->uid
 		);
 		$this->db->update('article',$article,array('id'=>$id));
+		$this->db->delete('relation_tags',array('object_id'=>$id,'type'=>'article'));
 		if($tags){
-			$this->db->delete('relation_tags',array('object_id'=>$id,'type'=>'article'));
 			foreach ($tags as $key => $value) {
-				$tagData = array(
-					'object_id' => $id,
-					'type' => 'article',
-					'tag_id' => $value
-				);
+				$data = $this->db->get_where('tags',array('name'=>$value))->row_array();
+				if($data){
+					$tagData = array(
+							'object_id' => $id,
+							'type' => 'article',
+							'tag_id' => $data['id']
+					);
+				}else{
+					$this->db->insert('tags',array('name'=>$value,'bordercolor'=>'#1ab394','fontcolor'=>'#ffffff','color'=>'#1ab394'));
+					$tid = $this->db->insert_id();
+					$tagData = array(
+							'object_id' => $id,
+							'type' => 'article',
+							'tag_id' => $tid
+					);
+				}
 				$this->db->insert('relation_tags',$tagData);
 			}
+
 		}
 		$this->response_data('1','文章编辑成功');
 	}
@@ -167,6 +191,13 @@ class Article extends admin_Auth_Controller {
 		$categorys = $this->db->get('article_category')->result_array();
 		$arr['article'] = $article;
 		$arr['categorys'] = $categorys;
+		$arr['tags'] = '';
+		if(isset($article['tags'])){
+			$names = array_column($article['tags'], 'name');
+			$tags_str =implode(",",$names);
+			$arr['tags'] = $tags_str;
+		}
+
 		$this->twig->render('Article/editTpl',$arr);
 	}
 

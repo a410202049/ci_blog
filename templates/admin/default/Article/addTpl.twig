@@ -2,6 +2,7 @@
 {% block style %}
 <link rel="stylesheet" type="text/css" href="{{base_url('public/admin/js/plugins/editor/css/editormd.min.css')}}">
 <link rel="stylesheet" type="text/css" href="{{base_url('public/admin/css/plugins/webuploader/webuploader.css')}}">
+<link rel="stylesheet" type="text/css" href="{{base_url('public/admin/js/plugins/tagsinput/bootstrap-tagsinput.css')}}">
 <style>
     .tags-container .btn.active{
         background-color: #1ab394;
@@ -25,6 +26,9 @@
         padding: 0px;
         background: #fff;
         display: block;
+    }
+    .bootstrap-tagsinput{
+        width: 100%;
     }
 </style>
 {% endblock %}
@@ -82,7 +86,7 @@
 
                                       <div class="form-group must">
                                         <label for="none">文章关键词</label>
-                                        <select class="form-control" style="width:100%" id="keywords" multiple=multiple></select>
+                                        <input class="form-control" type="text" id="keywords" data-role="tagsinput" />
                                     </div>
                                     <div class="row">
                                         <div class="form-group col-sm-1">
@@ -125,40 +129,12 @@
 </div>
 {% endblock %}
 {% block script %}
-<script src="{{base_url('public/admin/js/plugins/editor/editormd.min.js')}}"></script>    
-   
-<script src="{{base_url('public/admin/js/plugins/webuploader/webuploader.min.js')}}"></script>  
+<script src="{{base_url('public/admin/js/plugins/editor/editormd.min.js')}}"></script>
+<script src="{{base_url('public/admin/js/plugins/webuploader/webuploader.min.js')}}"></script>
+<script src="{{base_url('public/admin/js/plugins/tagsinput/bootstrap-tagsinput.js')}}"></script>
 <script>
 
 jQuery(document).ready(function($) {
-    $("#keywords").select2({
-      ajax: {
-        url: "{{base_url('admin/Tags/getTagsJson')}}",
-        type:'GET',
-        dataType: 'json',
-        delay: 250,
-        data: function (params) {
-          return {
-            "tagName": params.term, // search term
-          };
-        },
-        processResults: function (data, params) {
-          return {
-            results:data.data,
-          }
-        },
-        cache: false
-      },
-      escapeMarkup: function (markup) { return markup; }, // let our custom formatter work
-      minimumInputLength: 1,
-      templateResult:function(re){
-        if(re.loading) return "Loading..."
-        return ('<strong>'+re.name+'</strong>')
-      },
-      templateSelection:function(re){
-        return(re.name)
-      }
-    });
 
     var SWF_URL = '{{base_url("public/admin/js/plugins/webuploader/Uploader.swf")}}';
     var SERVER_URL = "{{base_url('admin/Index/upload?folder=article')}}"+'&size=200*200';
@@ -234,7 +210,7 @@ jQuery(document).ready(function($) {
                 cover_img:$('#photo').val(),
                 title:$('#title').val(),
                 description:$('#description').val(),
-                tags:$('#keywords').val(),
+                tags:$("#keywords").tagsinput('items'),
                 is_comment:$("#is_comment").hasClass('active')?1:0,
                 is_top:$("#is_top").hasClass('active')?1:0,
                 hit_num:$('#hit_num').val(),
