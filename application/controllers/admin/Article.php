@@ -179,8 +179,17 @@ class Article extends admin_Auth_Controller {
 	}
 
 	public function addTpl(){
-		$article_category = $this->db->get('article_category')->result_array();
-		$arr['categorys'] = $article_category;
+		$categorys = $this->db->get('article_category')->result_array();
+		foreach ($categorys as $key => $value) {
+			$categorys[$key]['parentid']= $value['pid'];
+		}
+		$this->load->library('tree');
+		$this->tree->icon = array('&nbsp;&nbsp;&nbsp;','&nbsp;&nbsp;&nbsp;├─ ','&nbsp;&nbsp;&nbsp;└─ ');
+		$this->tree->nbsp = '&nbsp;&nbsp;&nbsp;';
+		$this->tree->init($categorys);
+		$str = "<option value=\$id >\$spacer\$name</option>";
+		$menus = $this->tree->get_tree(0,$str,1);
+		$arr['categorys'] = $menus;
 		$this->twig->render('Article/addTpl',$arr);
 	}
 
@@ -189,15 +198,23 @@ class Article extends admin_Auth_Controller {
 		$this->load->model('ArticleModel','article');
 		$article = $this->article->getArticle($arr['id']);
 		$categorys = $this->db->get('article_category')->result_array();
+		foreach ($categorys as $key => $value) {
+			$categorys[$key]['parentid']= $value['pid'];
+		}
 		$arr['article'] = $article;
-		$arr['categorys'] = $categorys;
 		$arr['tags'] = '';
 		if(isset($article['tags'])){
 			$names = array_column($article['tags'], 'name');
 			$tags_str =implode(",",$names);
 			$arr['tags'] = $tags_str;
 		}
-
+		$this->load->library('tree');
+		$this->tree->icon = array('&nbsp;&nbsp;&nbsp;','&nbsp;&nbsp;&nbsp;├─ ','&nbsp;&nbsp;&nbsp;└─ ');
+		$this->tree->nbsp = '&nbsp;&nbsp;&nbsp;';
+		$this->tree->init($categorys);
+		$str = "<option value=\$id >\$spacer\$name</option>";
+		$menus = $this->tree->get_tree(0,$str,1);
+		$arr['categorys'] = $menus;
 		$this->twig->render('Article/editTpl',$arr);
 	}
 
