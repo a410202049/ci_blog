@@ -1,6 +1,4 @@
 <?php
-namespace Library;
-
 /**
  * Api请求代理
  *
@@ -168,7 +166,7 @@ abstract class ApiProxy
      * 子类需覆盖
      * @param array &$params
     */
-    abstract protected function _sign(&$params) {}
+    abstract protected function _sign(&$params);
 
     /**
      * 初始化
@@ -178,11 +176,12 @@ abstract class ApiProxy
     protected function _init($_apiFlag)
     {
         $this->_ci = &get_instance();
-        $this->_curl = $this->_ci->load->library('Curl');
+        $this->_ci->load->library('Curl');
+        $this->_curl = $this->_ci->curl;
         
         self::$_apiFlag = $_apiFlag;
         $this->_ci->config->load('api');
-        $this->_config = $this->_ci->Config->item(self::$_apiFlag);
+        $this->_config = $this->_ci->config->item(self::$_apiFlag);
 
     }
     
