@@ -6,6 +6,9 @@ class Index extends CI_Controller {
 	}
 
 	public function index(){
+		require_once APPPATH.'libraries/Api.php';
+		$a = new Api('xxx_api');
+		echo $a->request('xxx_ooo');
 		echo "admin";
 	}
 
